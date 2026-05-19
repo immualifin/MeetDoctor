@@ -85,12 +85,6 @@ class DoctorController extends Controller
         $data['fee'] = str_replace('IDR ', '', $data['fee']);
 
         // upload process here
-        $path = public_path('app/public/assets/file-doctor');
-        if(!File::isDirectory($path)){
-            $response = Storage::makeDirectory('public/assets/file-doctor');
-        }
-
-        // change file locations
         if(isset($data['photo'])){
             $data['photo'] = $request->file('photo')->store(
                 'assets/file-doctor', 'public'
@@ -161,18 +155,15 @@ class DoctorController extends Controller
              // first checking old photo to delete from storage
             $get_item = $doctor['photo'];
 
+            // delete old photo from storage
+            if ($get_item != "" && Storage::disk('public')->exists($get_item)) {
+                Storage::disk('public')->delete($get_item);
+            }
+
             // change file locations
             $data['photo'] = $request->file('photo')->store(
                 'assets/file-doctor', 'public'
             );
-
-            // delete old photo from storage
-            $data_old = 'storage/'.$get_item;
-            if (File::exists($data_old)) {
-                File::delete($data_old);
-            }else{
-                File::delete('storage/app/public/'.$get_item);
-            }
 
         }
 
@@ -196,11 +187,8 @@ class DoctorController extends Controller
         // first checking old file to delete from storage
         $get_item = $doctor['photo'];
 
-        $data = 'storage/'.$get_item;
-        if (File::exists($data)) {
-            File::delete($data);
-        }else{
-            File::delete('storage/app/public/'.$get_item);
+        if ($get_item != "" && Storage::disk('public')->exists($get_item)) {
+            Storage::disk('public')->delete($get_item);
         }
 
         $doctor->forceDelete();
