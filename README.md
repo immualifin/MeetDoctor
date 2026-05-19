@@ -47,8 +47,8 @@ Ikuti langkah-langkah berikut untuk menjalankan proyek di lingkungan lokal Anda:
 
 1. **Clone Repository**
    ```bash
-   git clone https://github.com/username/bootcamp-fwd-2022-laravel-9.git
-   cd bootcamp-fwd-2022-laravel-9
+   git clone https://github.com/immualifin/MeetDoctor.git
+   cd MeetDoctor
    ```
 
 2. **Instal Dependensi PHP**
