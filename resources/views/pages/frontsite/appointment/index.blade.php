@@ -10,9 +10,9 @@
 
             <!-- Detail Doctor  -->
             <div class="lg:w-5/12 lg:border-r h-72 lg:h-[30rem] flex flex-col items-center justify-center text-center">
-                <img src="{{ url(Storage::url($doctor->photo)) }}"
+                <img src="{{ asset($doctor->photo) }}"
                     class="inline-block w-32 h-32 rounded-full bg-center object-cover object-top" alt="doctor-1" />
-                <div class="text-[#1E2B4F] text-lg font-semibold mt-4">
+                <div class="text-[#1E3A5F] text-lg font-semibold mt-4">
                     {{ $doctor->name ?? '' }}
                 </div>
 
@@ -50,13 +50,13 @@
                                 fill="#FFB340" />
                         </svg>
                     </div>
-                    <span class="text-[#1E2B4F] font-medium"> (12,495) </span>
+                    <span class="text-[#1E3A5F] font-medium"> (12,495) </span>
                 </div>
             </div>
 
             <!-- Form Appointment -->
             <div class="lg:w-1/3 mt-10 lg:mt-0">
-                <h2 class="text-[#1E2B4F] text-3xl font-semibold leading-normal">
+                <h2 class="text-[#1E3A5F] text-3xl font-semibold leading-normal">
                     Apply for <br />
                     New Appointment
                 </h2>
@@ -69,7 +69,7 @@
                         <select
                             name="consultation_id"
                             id="consultation_id"
-                            class="block w-full rounded-full py-4 text-[#1E2B4F] font-medium px-7 border border-[#d4d4d4] focus:outline-none focus:border-[#0D63F3]"
+                            class="block w-full rounded-full py-4 text-[#1E3A5F] font-medium px-7 border border-[#d4d4d4] focus:outline-none focus:border-[#2563EB]"
                             placeholder="Topik Konsultasi" required
                         >
 
@@ -88,7 +88,7 @@
                         <select
                             name="level_id"
                             id="level_id"
-                            class="block w-full rounded-full py-4 text-[#1E2B4F] font-medium px-7 border border-[#d4d4d4] focus:outline-none focus:border-[#0D63F3]"
+                            class="block w-full rounded-full py-4 text-[#1E3A5F] font-medium px-7 border border-[#d4d4d4] focus:outline-none focus:border-[#2563EB]"
                             placeholder="Level" required
                         >
                             <option value="" disabled selected class="hidden">Level</option>
@@ -103,7 +103,7 @@
                             type="text"
                             id="date"
                             name="date"
-                            class="block w-full rounded-full py-4 text-[#1E2B4F] font-medium placeholder:text-[#AFAEC3] placeholder:font-normal px-7 border border-[#d4d4d4] focus:outline-none focus:border-[#0D63F3]"
+                            class="block w-full rounded-full py-4 text-[#1E3A5F] font-medium placeholder:text-[#AFAEC3] placeholder:font-normal px-7 border border-[#d4d4d4] focus:outline-none focus:border-[#2563EB]"
                             placeholder="Choose Date" required
                         />
                             <span
@@ -152,7 +152,7 @@
                             type="text"
                             id="time"
                             name="time"
-                            class="block w-full rounded-full py-4 text-[#1E2B4F] font-medium placeholder:text-[#AFAEC3] placeholder:font-normal px-7 border border-[#d4d4d4] focus:outline-none focus:border-[#0D63F3]"
+                            class="block w-full rounded-full py-4 text-[#1E3A5F] font-medium placeholder:text-[#AFAEC3] placeholder:font-normal px-7 border border-[#d4d4d4] focus:outline-none focus:border-[#2563EB]"
                             placeholder="Choose Time" required
                         />
                         <span
@@ -185,7 +185,7 @@
                     <input type="hidden" name="doctor_id" value="{{ $doctor->id ?? '' }}">
 
                     <div class="grid">
-                        <button type="submit" class="bg-[#0D63F3] rounded-full mt-5 text-white text-lg font-medium px-10 py-3 text-center" onclick="return confirm('Are you sure want to confirm this appointment ?')">Continue</button>
+                        <button type="submit" class="bg-[#2563EB] rounded-full mt-5 text-white text-lg font-medium px-10 py-3 text-center" onclick="return confirm('Are you sure want to confirm this appointment ?')">Continue</button>
                     </div>
                 </form>
             </div>

@@ -14,12 +14,12 @@
                     <img
                         class="h-12 lg:h-16"
                         src="{{ asset('/assets/frontsite/images/logo.png') }}"
-                        alt="Meet Doctor Logo"
+                        alt="MediCare Logo"
                     />
                 </a>
 
                 <div class="flex flex-col justify-center py-14 h-screen lg:min-h-screen">
-                    <h2 class="text-[#1E2B4F] text-4xl font-semibold leading-normal">
+                    <h2 class="text-[#1E3A5F] text-4xl font-semibold leading-normal">
                         Improve Your <br />
                         Health With Expert
                     </h2>
@@ -41,7 +41,7 @@
                             <label class="block">
                                 <input
                                     for="email" type="email" id="email" name="email"
-                                    class="block w-full rounded-full py-4 text-[#1E2B4F] font-medium placeholder:text-[#AFAEC3] placeholder:font-normal px-7 border border-[#d4d4d4] focus:outline-none focus:border-[#0D63F3]"
+                                    class="block w-full rounded-full py-4 text-[#1E3A5F] font-medium placeholder:text-[#AFAEC3] placeholder:font-normal px-7 border border-[#d4d4d4] focus:outline-none focus:border-[#2563EB]"
                                     placeholder="Email Address" value="{{ old('email') }}" required autofocus
                                 />
 
@@ -53,7 +53,7 @@
                             <label class="block">
                                 <input
                                     for="password" type="password" id="password" name="password"
-                                    class="block w-full rounded-full py-4 text-[#1E2B4F] font-medium placeholder:text-[#AFAEC3] placeholder:font-normal px-7 border border-[#d4d4d4] focus:outline-none focus:border-[#0D63F3]"
+                                    class="block w-full rounded-full py-4 text-[#1E3A5F] font-medium placeholder:text-[#AFAEC3] placeholder:font-normal px-7 border border-[#d4d4d4] focus:outline-none focus:border-[#2563EB]"
                                     placeholder="Password"
                                 />
 
@@ -63,10 +63,10 @@
                             </label>
 
                             <div class="mt-10 grid gap-6">
-                                <button class="text-center text-white text-lg font-medium bg-[#0D63F3] px-10 py-4 rounded-full">
+                                <button class="text-center text-white text-lg font-medium bg-[#2563EB] px-10 py-4 rounded-full">
                                     Sign In
                                 </button>
-                                <a href="{{ route('register') }}" class="text-center text-lg text-[#1E2B4F] font-medium bg-[#F2F6FE] px-10 py-4 rounded-full">
+                                <a href="{{ route('register') }}" class="text-center text-lg text-[#1E3A5F] font-medium bg-[#EFF6FF] px-10 py-4 rounded-full">
                                     New Account
                                 </a>
                             </div>
@@ -90,14 +90,14 @@
                         </div>
 
                         <p class="text-2xl leading-loose">
-                            MeetDoctor telah membantu saya terhubung dengan dokter yang
+                            MediCare telah membantu saya terhubung dengan dokter yang
                             professional dan memberikan dampak yang sangat besar kepada
                             kesehatan yang baik kepada saya
                         </p>
 
                         <div class="flex-shrink-0 group block mt-7">
                             <div class="flex items-center">
-                                <div class="ring-1 ring-[#0D63F3] ring-offset-4 rounded-full">
+                                <div class="ring-1 ring-[#2563EB] ring-offset-4 rounded-full">
                                     <img
                                         class="inline-block h-14 w-14 rounded-full"
                                         src="{{ asset('/assets/frontsite/images/patient-testimonial.png') }}"
@@ -105,7 +105,7 @@
                                     />
                                 </div>
                                 <div class="ml-5">
-                                    <p class="font-medium text-[#1E2B4F]">Shayna</p>
+                                    <p class="font-medium text-[#1E3A5F]">Shayna</p>
                                     <p class="text-sm text-[#AFAEC3]">Product Designer</p>
                                 </div>
                             </div>

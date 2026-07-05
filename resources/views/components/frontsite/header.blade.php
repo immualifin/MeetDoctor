@@ -9,7 +9,7 @@
                 <img
                     class="h-12 lg:h-16 w-auto"
                     src="{{ asset('/assets/frontsite/images/logo.png') }}"
-                    alt="Meet Doctor Logo"
+                    alt="MediCare Logo"
                 />
                 </a>
 
@@ -18,25 +18,25 @@
 
                 <a
                     href="{{ route('index') }}"
-                    class="text-[#1E2B4F] relative {{ request()->is('/') ? "after:absolute after:content-[''] after:border-b-2 after:border-[#0D63F5] after:w-8/12 after:-translate-x-1/2 after:bottom-3 after:left-1/2 font-semibold inline-flex items-center px-1 text-lg" : "hover:text-gray-500 inline-flex items-center px-1 pt-1 text-lg font-medium" }} "
+                    class="text-[#1E3A5F] relative {{ request()->is('/') ? "after:absolute after:content-[''] after:border-b-2 after:border-[#2563EB] after:w-8/12 after:-translate-x-1/2 after:bottom-3 after:left-1/2 font-semibold inline-flex items-center px-1 text-lg" : "hover:text-gray-500 inline-flex items-center px-1 pt-1 text-lg font-medium" }} "
                 >
                     Home
                 </a>
                 <a
                     href="#"
-                    class="text-[#1E2B4F] relative hover:text-gray-500 inline-flex items-center px-1 pt-1 text-lg font-medium"
+                    class="text-[#1E3A5F] relative hover:text-gray-500 inline-flex items-center px-1 pt-1 text-lg font-medium"
                 >
                     Featured
                 </a>
                 <a
                     href="#"
-                    class="text-[#1E2B4F] relative hover:text-gray-500 inline-flex items-center px-1 pt-1 text-lg font-medium"
+                    class="text-[#1E3A5F] relative hover:text-gray-500 inline-flex items-center px-1 pt-1 text-lg font-medium"
                 >
                     Category
                 </a>
                 <a
                     href="#"
-                    class="text-[#1E2B4F] relative hover:text-gray-500 inline-flex items-center px-1 pt-1 text-lg font-medium"
+                    class="text-[#1E3A5F] relative hover:text-gray-500 inline-flex items-center px-1 pt-1 text-lg font-medium"
                 >
                     Pricing
                 </a>
@@ -49,7 +49,7 @@
                 <div class="hidden lg:ml-10 lg:flex lg:items-center">
                     <a
                     href="{{ route('login') }}"
-                    class="inline-flex items-center rounded-full text-[#1E2B4F] text-lg font-medium bg-[#F2F6FE] px-10 py-3"
+                    class="inline-flex items-center rounded-full text-[#1E3A5F] text-lg font-medium bg-[#EFF6FF] px-10 py-3"
                     >
                     Sign In
                     </a>
@@ -59,7 +59,7 @@
                 <div class="-mr-2 flex items-center lg:hidden">
                     <button
                     type="button"
-                    class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#0D63F3]"
+                    class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#2563EB]"
                     aria-controls="mobile-menu"
                     aria-expanded="false"
                     @click="navbarMobileOpen = ! navbarMobileOpen"
@@ -127,7 +127,7 @@
                                 <!-- focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 -->
                                 <span class="sr-only">Open user menu</span>
                                 <div class="text-right mr-5">
-                                    <div class="text-base font-medium text-[#1E2B4F]">
+                                    <div class="text-base font-medium text-[#1E3A5F]">
                                         Hi, {{ Auth::user()->name }}
                                     </div>
 
@@ -135,7 +135,7 @@
                                     <div class="text-sm text-[#AFAEC3]">Pasien</div>
                                 </div>
                                 <img
-                                class="h-12 w-12 rounded-full ring-1 ring-offset-4 ring-[#0D63F3]"
+                                class="h-12 w-12 rounded-full ring-1 ring-offset-4 ring-[#2563EB]"
                                 src="{{ asset('/assets/frontsite/images/authenticated-user.svg') }}"
                                 alt="User Profile"
                                 />
@@ -159,7 +159,7 @@
                         >
                             <a
                                 href="{{ route('backsite.dashboard.index') }}"
-                                class="block px-4 py-2 text-sm text-[#1E2B4F] hover:bg-gray-100"
+                                class="block px-4 py-2 text-sm text-[#1E3A5F] hover:bg-gray-100"
                                 role="menuitem"
                                 tabindex="-1"
                                 id="user-menu-item-1"
@@ -167,7 +167,7 @@
                             >
                             <a
                                 href="#"
-                                class="block px-4 py-2 text-sm text-[#1E2B4F] hover:bg-gray-100"
+                                class="block px-4 py-2 text-sm text-[#1E3A5F] hover:bg-gray-100"
                                 role="menuitem"
                                 tabindex="-1"
                                 id="user-menu-item-0"
@@ -176,7 +176,7 @@
                             <a
                                 href="{{ route('logout') }}"
                                 onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
-                                class="block px-4 py-2 text-sm text-[#1E2B4F] hover:bg-gray-100"
+                                class="block px-4 py-2 text-sm text-[#1E3A5F] hover:bg-gray-100"
                                 role="menuitem"
                                 tabindex="-1"
                                 id="user-menu-item-2"
@@ -194,7 +194,7 @@
                 <div class="-mr-2 flex items-center lg:hidden">
                     <button
                         type="button"
-                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#0D63F3]"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#2563EB]"
                         aria-controls="mobile-menu"
                         aria-expanded="false"
                         @click="navbarMobileOpen = ! navbarMobileOpen"
@@ -255,29 +255,29 @@
         <div class="pt-2 pb-3 space-y-1">
 
             <!--
-            Active Link: "bg-indigo-50 border-[#0D63F5] text-[#1E2B4F]",
+            Active Link: "bg-teal-50 border-[#2563EB] text-[#1E3A5F]",
 
-            Default Link: "border-transparent text-[#1E2B4F] hover:bg-gray-50
+            Default Link: "border-transparent text-[#1E3A5F] hover:bg-gray-50
                         hover:border-gray-300 hover:text-gray-700"
             -->
             <a
             href="#"
-            class="bg-indigo-50 border-[#0D63F5] text-[#1E2B4F] block pl-3 pr-4 py-2 border-l-4 text-base font-semibold"
+            class="bg-teal-50 border-[#2563EB] text-[#1E3A5F] block pl-3 pr-4 py-2 border-l-4 text-base font-semibold"
             >Home</a
             >
             <a
             href="#"
-            class="border-transparent text-[#1E2B4F] hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+            class="border-transparent text-[#1E3A5F] hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
             >Featured</a
             >
             <a
             href="#"
-            class="border-transparent text-[#1E2B4F] hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+            class="border-transparent text-[#1E3A5F] hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
             >Category</a
             >
             <a
             href="#"
-            class="border-transparent text-[#1E2B4F] hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+            class="border-transparent text-[#1E3A5F] hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
             >Pricing</a
             >
         </div>
@@ -288,7 +288,7 @@
         >
             <a
                 href="{{ route('login') }}"
-                class="flex items-center justify-center text-center mx-4 rounded-full text-[#1E2B4F] text-lg font-medium bg-[#F2F6FE] px-10 py-3"
+                class="flex items-center justify-center text-center mx-4 rounded-full text-[#1E3A5F] text-lg font-medium bg-[#EFF6FF] px-10 py-3"
             >
             Sign In
             </a>

@@ -13,11 +13,11 @@
                 <!-- Doctor Information -->
                 <div class="flex flex-wrap items-center space-x-5">
                     <div class="flex-shrink-0">
-                        <img src="{{ url(Storage::url($appointment->doctor->photo)) ?? '' }}" class="w-20 h-20 rounded-full bg-center object-cover object-top" alt="Doctor 1"/>
+                        <img src="{{ asset($appointment->doctor->photo) ?? '' }}" class="w-20 h-20 rounded-full bg-center object-cover object-top" alt="Doctor 1"/>
                     </div>
 
                     <div class="flex-1 space-y-1">
-                        <div class="text-[#1E2B4F] text-lg font-semibold">
+                        <div class="text-[#1E3A5F] text-lg font-semibold">
                             {{ $appointment->doctor->name ?? '' }}
                         </div>
                         <div class="text-[#AFAEC3]">{{ $appointment->doctor->specialist->name ?? '' }}</div>
@@ -93,7 +93,7 @@
                             />
                             </svg>
                         </div>
-                        <span class="text-[#1E2B4F] font-medium"> (12,495) </span>
+                        <span class="text-[#1E3A5F] font-medium"> (12,495) </span>
                         </div>
                     </div>
 
@@ -168,21 +168,21 @@
                                 />
                             </svg>
                         </div>
-                        <span class="text-[#1E2B4F] font-medium"> (12,495) </span>
+                        <span class="text-[#1E3A5F] font-medium"> (12,495) </span>
                     </div>
                 </div>
 
                 <!-- Appoinment Information -->
                 <div class="mt-16">
-                    <h5 class="text-[#1E2B4F] text-lg font-semibold">Appointment</h5>
+                    <h5 class="text-[#1E3A5F] text-lg font-semibold">Appointment</h5>
                     <div class="flex items-center justify-between mt-5">
                         <div class="text-[#AFAEC3] font-medium">Kebutuhan konsultasi</div>
-                        <div class="text-[#1E2B4F] font-medium">{{ $appointment->consultation->name ?? '' }}</div>
+                        <div class="text-[#1E3A5F] font-medium">{{ $appointment->consultation->name ?? '' }}</div>
                     </div>
 
                     <div class="flex items-center justify-between mt-5">
                         <div class="text-[#AFAEC3] font-medium">Level</div>
-                        <div class="text-[#1E2B4F] font-medium">
+                        <div class="text-[#1E3A5F] font-medium">
                             @if ($appointment->level == 1)
                                 {{ 'Low' }}
                             @elseif ($appointment->level == 2)
@@ -197,17 +197,17 @@
 
                     <div class="flex items-center justify-between mt-5">
                         <div class="text-[#AFAEC3] font-medium">Dijadwalkan pada</div>
-                        <div class="text-[#1E2B4F] font-medium">{{ date("d F Y",strtotime($appointment->date)) ?? '' }}</div>
+                        <div class="text-[#1E3A5F] font-medium">{{ date("d F Y",strtotime($appointment->date)) ?? '' }}</div>
                     </div>
 
                     <div class="flex items-center justify-between mt-5">
                         <div class="text-[#AFAEC3] font-medium">Waktu</div>
-                        <div class="text-[#1E2B4F] font-medium">{{ date("H:i",strtotime($appointment->time)) ?? '' }}</div>
+                        <div class="text-[#1E3A5F] font-medium">{{ date("H:i",strtotime($appointment->time)) ?? '' }}</div>
                     </div>
 
                     <div class="flex items-center justify-between mt-5">
                         <div class="text-[#AFAEC3] font-medium">Status</div>
-                        <div class="text-[#1E2B4F] font-medium">
+                        <div class="text-[#1E3A5F] font-medium">
                             @if ($appointment->status == 1)
                                 {{ 'Payment Completed' }}
                             @elseif ($appointment->status == 2)
@@ -221,40 +221,40 @@
 
                 <!-- Payment Information -->
                 <div class="mt-16">
-                    <h5 class="text-[#1E2B4F] text-lg font-semibold">
+                    <h5 class="text-[#1E3A5F] text-lg font-semibold">
                         Payment Information
                     </h5>
 
                     <div class="flex items-center justify-between mt-5">
                         <div class="text-[#AFAEC3] font-medium">Biaya konsultasi</div>
-                        <div class="text-[#1E2B4F] font-medium">{{ 'IDR '.number_format($appointment->doctor->specialist->price) ?? '' }}</div>
+                        <div class="text-[#1E3A5F] font-medium">{{ 'IDR '.number_format($appointment->doctor->specialist->price) ?? '' }}</div>
                     </div>
 
                     <div class="flex items-center justify-between mt-5">
                         <div class="text-[#AFAEC3] font-medium">Fee dokter</div>
-                        <div class="text-[#1E2B4F] font-medium">{{ 'IDR '.number_format($appointment->doctor->fee) ?? '' }}</div>
+                        <div class="text-[#1E3A5F] font-medium">{{ 'IDR '.number_format($appointment->doctor->fee) ?? '' }}</div>
                     </div>
 
                     <div class="flex items-center justify-between mt-5">
                         <div class="text-[#AFAEC3] font-medium">Fee hospital</div>
-                        <div class="text-[#1E2B4F] font-medium">{{ 'IDR '.number_format($config_payment->fee) ?? '' }}</div>
+                        <div class="text-[#1E3A5F] font-medium">{{ 'IDR '.number_format($config_payment->fee) ?? '' }}</div>
                     </div>
 
                     <div class="flex items-center justify-between mt-5">
                         <div class="text-[#AFAEC3] font-medium">VAT {{ $config_payment->vat ?? '' }}%</div>
-                        <div class="text-[#1E2B4F] font-medium">{{ 'IDR '.number_format($total_with_vat) ?? '' }}</div>
+                        <div class="text-[#1E3A5F] font-medium">{{ 'IDR '.number_format($total_with_vat) ?? '' }}</div>
                     </div>
 
                     <div class="flex items-center justify-between mt-5">
                         <div class="text-[#AFAEC3] font-medium">Grand total</div>
-                        <div class="text-[#2AB49B] font-semibold">{{ 'IDR '.number_format($grand_total) ?? '' }}</div>
+                        <div class="text-[#3B82F6] font-semibold">{{ 'IDR '.number_format($grand_total) ?? '' }}</div>
                     </div>
                 </div>
             </div>
 
              <!-- Choose Payment -->
             <div class="lg:col-span-5 lg:pl-20 lg:pr-7 mt-10 lg:mt-0">
-                <h3 class="text-[#1E2B4F] text-3xl font-semibold leading-normal">Choose Your <br />Payment Method
+                <h3 class="text-[#1E3A5F] text-3xl font-semibold leading-normal">Choose Your <br />Payment Method
                 </h3>
 
                 <form action="{{ route('payment.store') }}" method="POST" enctype="multipart/form-data" x-data="{ payment: '' }" class="mt-8">
@@ -274,7 +274,7 @@
                             />
 
                             <label
-                                class="flex flex-col justify-center items-center bg-white border-[#EDEDED] cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-[#0D63F3] peer-checked:ring-2 peer-checked:border-transparent rounded-3xl border-2 p-7"
+                                class="flex flex-col justify-center items-center bg-white border-[#EDEDED] cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-[#2563EB] peer-checked:ring-2 peer-checked:border-transparent rounded-3xl border-2 p-7"
                                 for="master-card"
                             >
                                 <img
@@ -295,7 +295,7 @@
                                 class="sr-only peer"
                             />
                             <label
-                                class="flex flex-col justify-center items-center bg-white border-[#EDEDED] cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-[#0D63F3] peer-checked:ring-2 peer-checked:border-transparent rounded-3xl border-2 p-7"
+                                class="flex flex-col justify-center items-center bg-white border-[#EDEDED] cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-[#2563EB] peer-checked:ring-2 peer-checked:border-transparent rounded-3xl border-2 p-7"
                                 for="visa"
                             >
                                 <img
@@ -316,7 +316,7 @@
                                 class="sr-only peer"
                             />
                             <label
-                                class="flex flex-col justify-center items-center bg-white border-[#EDEDED] cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-[#0D63F3] peer-checked:ring-2 peer-checked:border-transparent rounded-3xl border-2 p-7"
+                                class="flex flex-col justify-center items-center bg-white border-[#EDEDED] cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-[#2563EB] peer-checked:ring-2 peer-checked:border-transparent rounded-3xl border-2 p-7"
                                 for="cirrus"
                             >
                                 <img
@@ -337,7 +337,7 @@
                                 class="sr-only peer"
                             />
                             <label
-                                class="flex flex-col justify-center items-center bg-white border-[#EDEDED] cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-[#0D63F3] peer-checked:ring-2 peer-checked:border-transparent rounded-3xl border-2 p-7"
+                                class="flex flex-col justify-center items-center bg-white border-[#EDEDED] cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-[#2563EB] peer-checked:ring-2 peer-checked:border-transparent rounded-3xl border-2 p-7"
                                 for="mewallet"
                             >
                                 <img
@@ -357,7 +357,7 @@
                         <!--
                         button when payment is filled.
                         -->
-                        <button type="submit" class="bg-[#0D63F3] text-white px-10 py-3 rounded-full text-center" x-show="payment.length" onclick="return confirm('Are you sure want to payment this appointment ?')">Pay Now</button>
+                        <button type="submit" class="bg-[#2563EB] text-white px-10 py-3 rounded-full text-center" x-show="payment.length" onclick="return confirm('Are you sure want to payment this appointment ?')">Pay Now</button>
 
                         <!--
                         button when payment is empty.

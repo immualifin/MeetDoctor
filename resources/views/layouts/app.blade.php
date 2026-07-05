@@ -3,7 +3,7 @@
     <head>
         @include('includes.backsite.meta')
 
-        <title>@yield('title') | Meet Doctor Backoffice</title>
+        <title>@yield('title') | MediCare Backoffice</title>
 
         <link rel="apple-touch-icon" href="{{ asset('/assets/backsite/app-assets/images/ico/apple-icon-120.png') }}">
         <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/assets/backsite/app-assets/images/ico/favicon.ico') }}">

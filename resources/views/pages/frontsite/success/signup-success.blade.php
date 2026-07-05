@@ -13,11 +13,11 @@
             alt="Sign up success ilustration"
         />
         <div class="mt-12">
-            <h2 class="text-[#1E2B4F] text-2xl font-semibold">Registrasi Berhasil</h2>
+            <h2 class="text-[#1E3A5F] text-2xl font-semibold">Registrasi Berhasil</h2>
 
             <p class="text-[#AFAEC3] mt-4">Selamat menikmati kemudahan<br />dalam berkonsultasi</p>
 
-            <a href="{{ route('index') }}" class="inline-block mt-10 bg-[#0D63F3] text-white rounded-full px-14 py-3">Home</a>
+            <a href="{{ route('index') }}" class="inline-block mt-10 bg-[#2563EB] text-white rounded-full px-14 py-3">Home</a>
         </div>
     </div>
 </div>
